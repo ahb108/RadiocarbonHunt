@@ -1,0 +1,99 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal header -->
+            <div class="modal-header">
+                <h3>Transcribing the Worthington Smith notebooks</h3>
+
+            </div>
+
+            <!-- Step 1 of the tutorial -->
+            <div id="0" class="modal-body" style="display:none">
+                <p>This application is very simple and is a transcription based exercise. Our team would like you to
+                write down exactly what you see on each line of the notepad into the table displayed below the zooming image.</p>
+
+                <p>Each entry in the note book is similar, 7 fields:</p>
+                <ol>
+                    <li>Entry number</li>
+                    <li>Date of discovery</li>
+                    <li>Description of the discovery</li>
+                    <li>Length in inches</li>
+                    <li>Width in inches</li>
+                    <li>Weight in pounds</li>
+                    <li>Weight in ounces</li>
+                </ol>
+            </div>
+
+            <!-- Step 2 of the tutorial -->
+            <div id="1" class="modal-body" style="display:none">
+                <p>
+                    The image that we would like you to transcribe for us, starts at the top of the page and can be scrolled
+                    up and down, and zoomed in and out to read more of the contents. We hope that this interface allows you to
+                    work on the image concurrently with the text table below the image container.
+                </p>
+
+                <p>
+                    The table starts off with just 6 rows but will add another automatically when you get to the bottom, up
+                    to a maximum of 20 rows.
+                </p>
+
+                <p>
+                    The image is contained within an interface that allows you to zoom in and out, and even go full screen.
+                    Try the controls out, you won't break anything!
+                </p>
+            </div>
+
+            <!-- Step 2 of the tutorial -->
+            <div id="2" class="modal-body" style="display:none">
+                <p>
+                    As in the Bronze Age index transcription applications, some abbreviations are used. If you see the sign in the image below, it means 'ditto'.
+                    So please enter the same as the previous line's entry.
+                </p>
+                <img src="http://micropasts.org/wp-content/uploads/2015/03/MicroPasts-·-Project-Transcribing-the-Worthington-George-Smith-catalogue-·-Contribute.png">
+                <p>
+                    As this is an antiquarian notebook, the measurements are not metric and are in imperial measures. When transcribing, do not
+                    attempt to convert the weights or dimensions. Instead please just enter as seen. If you see 3 1/4, then please enter as such.
+                    The project team will do the conversions.
+                </p>
+            </div>
+            <!-- End of stepped modal body -->
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <a id="prevBtn" href="#" onclick="showStep('prev')" class="btn btn-default">Previous</a>
+                <a id="nextBtn" href="#" onclick="showStep('next')" class="btn btn-success">Next</a>
+                <button id="startContrib" data-dismiss="modal" class="btn btn-primary" style="display:none"/>
+                <i class="glyphicon glyphicon-thumbs-up"></i> Let's start!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var step = -1;
+    function showStep(action) {
+        $("#" + step).hide();
+        if (action == 'next') {
+            step = step + 1;
+        }
+        if (action == 'prev') {
+            step = step - 1;
+        }
+        if (step == 0) {
+            $("#prevBtn").hide();
+        }
+        else {
+            $("#prevBtn").show();
+        }
+
+        if (step == 3 ) {
+            $("#nextBtn").hide();
+            $("#startContrib").show();
+        }
+        $("#" + step).show();
+    }
+
+    showStep('next');
+    $("#modal").modal('show');
+</script>
