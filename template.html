@@ -86,7 +86,7 @@ xmlns="http://www.w3.org/1999/html"></script>
 <!-- Start of messages -->
 <div style="margin-top:15px;">
 	<div id="success" class="alert alert-success" style="display:none;">
-		<strong>Well done!</strong> You have successfully submitted your transcription. Here is another to try if you wish!
+		<strong>Well done!</strong> You have successfully submitted your contribution. Here is another to try if you wish!
 	</div>
 	<div id="loading" class="alert alert-info" style="display:none;">
 		<img src="/static/img/loading.gif">Loading next task...
@@ -117,7 +117,7 @@ Task DOM for loading the S3 Images
 It uses the class="skeleton" to identify the elements that belong to the
 task.
 -->
-<div class="row skeleton" id="transcription">
+<div class="row skeleton" id="rcData">
 	<div class="row">
 		<div class="btn-group">
 			<button class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal">
@@ -158,7 +158,7 @@ task.
 		</div>
 		<!-- End of feedback row -->
 	</div>
-	<!-- End of the transcribe section -->
+	<!-- End of the section -->
 </div>
 <!-- End of DOM Skeleton row -->
 
@@ -361,7 +361,7 @@ task.
 				evt.preventDefault();
 				var answer = $(evt.target).attr("value");
 				if ( typeof answer != 'undefined') {
-					task.answer = $("#transcription").serializeJSON();
+					task.answer = $("#rcData").serializeJSON();
 					console.log(task.answer);
 					var handsontable = $("#rcTable").data('handsontable');
 					var data = handsontable.getData();
