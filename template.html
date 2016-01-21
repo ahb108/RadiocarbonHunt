@@ -100,8 +100,6 @@ xmlns="http://www.w3.org/1999/html"></script>
 		<p>
 			You have participated in all available tasks!
 		</p>
-		<img src="https://crowdfunded.micropasts.org/assets/logo-head.png"
-		height="200" width="200" alt="The MicroPasts Square Logo"/>
 		<div class="alert-actions">
 			<a class="btn-default btn" href="/">Go back to the home page</a>
 			<a class="btn-default btn" href="/app">or, have a look at our
@@ -121,11 +119,15 @@ It uses the class="skeleton" to identify the elements that belong to the
 task.
 -->
 <div class="row skeleton" id="transcription">
-	<!-- The image map column -->
+	<!-- The pdf section -->
 	<div class="row">
-		<div id="map"></div>
+		<div id="mypdf">
+			<iframe
+			id = "pdfImage"
+			width = "600px" height="600px" class="pdf" src="http://mozilla.github.com/pdf.js/web/viewer.html?file=compressed.tracemonkey-pldi-09.pdf"></iframe>
+		</div>
 	</div>
-	<!-- End of image map column -->
+	<!-- End of pdf section -->
 	<div class="row">
 		<div class="btn-group">
 			<button class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal">
@@ -339,10 +341,6 @@ task.
 			$("#question").html(task.info.question);
 			$('#task-id').html(task.id);
 
-			<iframe
-			id = "pdfImage"
-			width = "600px" height="600px" class="pdf" src="http://mozilla.github.com/pdf.js/web/viewer.html?file=compressed.tracemonkey-pldi-09.pdf"></iframe>
-
 			var data = [[]];
 			var config = {
 				data : data,
@@ -377,7 +375,7 @@ task.
 						}, "slow");
 						$("#success").fadeIn(500).fadeOut(500);
 						$("#loading").fadeIn(500).fadeOut(500);
-						map.setTarget(null);
+						mypdf.setTarget(null);
 						deferred.resolve();
 					});
 				} else {
@@ -395,24 +393,21 @@ task.
 </script>
 
 <style type="text/css">
-	#map {
+	#mypdf {
 		background-color: black;
 		height: 300px;
 	}
-	#map:-moz-full-screen {
+	#mypdf:-moz-full-screen {
 		height: 100%;
 	}
-	#map:-webkit-full-screen {
+	#mypdf:-webkit-full-screen {
 		height: 100%;
 	}
-	#map:-ms-fullscreen {
+	#mypdf:-ms-fullscreen {
 		height: 100%;
 	}
-	#map:full-screen {
+	#mypdf:full-screen {
 		height: 100%;
-	}
-	.ol-rotate {
-		top: 3em;
 	}
 	#rcTranscribe {
 		width: 100%;

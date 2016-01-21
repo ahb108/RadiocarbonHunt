@@ -35,9 +35,8 @@ database in a systematic way. As always, any such contributions will
 themselves also be made publicly available.
 
 ### This project is on behalf of:
-
-[![UCL Institute of Archaeology logo](http://micropasts-other.s3.amazonaws.com/other/UCL_logo.png)](http://ucl.ac.uk/archaeology)
 [![Archaeology Data Service logo](http://micropasts-other.s3.amazonaws.com/other/ADS_logo.png)](http://archaeologydataservice.ac.uk/)
+[![UCL Institute of Archaeology logo](http://micropasts-other.s3.amazonaws.com/other/UCL_logo.png)](http://ucl.ac.uk/archaeology)
 
 ### Find the code on GitHub
 
