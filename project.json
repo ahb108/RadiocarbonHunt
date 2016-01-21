@@ -1,7 +1,7 @@
 {
-    "name": "Gathering radiocarbon dates from grey literature",
+    "name": "Radiocarbon dates from fieldwork reports",
     "short_name": "RadiocarbonHunt",
     "thumbnail": "http://micropasts-other.s3.amazonaws.com/other/RadiocarbonHunt_thumb.png",
-    "description": "Collection of radiocarbon dates from grey literature",
+    "description": "Gathering radiocarbon dates from archaeological fieldwork reports",
     "question": "Help us collect radiocarbon dates from archeological fieldwork reports"
 }
