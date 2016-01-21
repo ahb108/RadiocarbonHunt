@@ -1,4 +1,11 @@
-
+<!-- Add scripts etc -->
+<script src="https://code.jquery.com/ui/1.8.1/jquery-ui.min.js" type="text/javascript"
+xmlns="http://www.w3.org/1999/html"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.12.6/handsontable.full.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.2.1/ol.min.js" type="text/javascript"></script>
+<script src="/static/js/vendor/jquery.serializeJSON.min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js" type="text/javascript"></script>
+<script src="/static/vendor/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
 
 <!-- Add style sheets -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.2.1/ol.css" type="text/css">
@@ -6,7 +13,6 @@
 <link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.12.6/handsontable.full.min.css">
 
 <!-- Start of the survey modals -->
-
 <div id="survey" class="modal fade" data-backdrop="static">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -132,10 +138,10 @@ task.
 			class="glyphicon glyphicon-book"></i> Community Help</a>
 		</div>
 	</div>
-	<!-- The transcribe section using html table -->
+	<!-- The data entry section using html table -->
 	<div class="row">
 		<h4>Input any radiocarbon dates in this report:</h4>
-		<div id="rcTranscribe" class="handsontable"></div>
+		<div id="rcTable" class="handsontable"></div>
 		<button class="btn btn-success btn-answer" value='Yes'>
 			Submit you dates
 		</button>
@@ -247,15 +253,6 @@ task.
 	</div>
 </div>
 
-<!-- Add scripts etc -->
-<script src="https://code.jquery.com/ui/1.8.1/jquery-ui.min.js" type="text/javascript"
-xmlns="http://www.w3.org/1999/html"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/handsontable/0.12.6/handsontable.full.min.js" type="text/javascript"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ol3/3.2.1/ol.min.js" type="text/javascript"></script>
-<script src="/static/js/vendor/jquery.serializeJSON.min.js" type="text/javascript"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js" type="text/javascript"></script>
-<script src="/static/vendor/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
-
 <!-- Client side scripts -->
 <script>
 	// Quick fix for IE8
@@ -358,7 +355,7 @@ xmlns="http://www.w3.org/1999/html"></script>
 				contextMenu : ['row_below', 'remove_row', 'undo', 'redo'],
 				stretchH : 'all'
 			};
-			$("#RadiocarbonHunt").handsontable(config);
+			$("#rcTable").handsontable(config);
 
 			$('.btn-answer').off('click').on('click', function(evt) {
 				evt.preventDefault();
@@ -366,7 +363,7 @@ xmlns="http://www.w3.org/1999/html"></script>
 				if ( typeof answer != 'undefined') {
 					task.answer = $("#transcription").serializeJSON();
 					console.log(task.answer);
-					var handsontable = $("#rcTranscribe").data('handsontable');
+					var handsontable = $("#rcTable").data('handsontable');
 					var data = handsontable.getData();
 					console.log(data);
 					task.answer = data;
@@ -407,7 +404,7 @@ xmlns="http://www.w3.org/1999/html"></script>
 	#mypdf:full-screen {
 		height: 100%;
 	}
-	#rcTranscribe {
+	#rcTable {
 		width: 100%;
 	}
 	.btn-answer {
