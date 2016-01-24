@@ -117,29 +117,33 @@
 		</div>
 	</div>
 
-	<script>
-		var step = -1;
-		function showStep(action) {
-			$("#" + step).hide();
-			if (action == 'next') {
-				step = step + 1;
-			}
-			if (action == 'prev') {
-				step = step - 1;
-			}
-			if (step == 0) {
-				$("#prevBtn").hide();
-			} else {
-				$("#prevBtn").show();
-			}
-
-			if (step == 3) {
-				$("#nextBtn").hide();
-				$("#startContrib").show();
-			}
-			$("#" + step).show();
+	<!-- Step through modals -->
+<script type="text/javascript">
+	var step = -1;
+	function showStep(action) {
+		$("#" + step).hide();
+		if (action == 'next') {
+			step = step + 1;
+		}
+		if (action == 'prev') {
+			step = step - 1;
+		}
+		if (step == 0) {
+			$("#prevBtn").hide();
+			$("#startContrib").hide();
+			$("#nextBtn").show();
+		} else {
+			$("#prevBtn").show();
+			$("#nextBtn").show();
 		}
 
-		showStep('next');
-		$("#modal").modal('show');
-	</script>
+		if (step == 3) {
+			$("#nextBtn").hide();
+			$("#startContrib").show();
+		}
+		$("#" + step).show();
+	}
+
+	showStep('next');
+	$("#modal").modal('show'); 
+</script>

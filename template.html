@@ -125,7 +125,7 @@ task.
 				class="glyphicon glyphicon-eye-open"></i> Tutorial
 			</button>
 			<a class="btn btn-info btn-xs" id="imgLink" target="_blank" data-toggle="tooltip" data-placement="top"
-			title="Opens in a new window" href="http://community.micropasts.org/category/crowdsourcing-support"><i
+			title="Opens in a new window" href="http://community.micropasts.org/"><i
 			class="glyphicon glyphicon-book"></i> Community Help</a>
 		</div>
 	</div>
@@ -207,7 +207,7 @@ task.
 						Please simply put the decimal number, not any unit symbols etc. So for example, for the first date in the image below, you would put "-22.2" in the dC13 column.
 					</li>
 				</ol>
-				<img src="http://micropasts-other.s3.amazonaws.com/other/exampledates.png" class="img-polaroid" alt="An example of two radiocarbon mentioned in a fieldwork report." width="50%"/>
+				<img src="http://micropasts-other.s3.amazonaws.com/other/exampledates.png" class="img-polaroid" alt="An example of two radiocarbon mentioned in a fieldwork report." width="75%"/>
 			</div>
 
 			<div id="2" class="modal-body" style="display:none">
@@ -303,8 +303,11 @@ task.
 		}
 		if (step == 0) {
 			$("#prevBtn").hide();
+			$("#startContrib").hide();
+			$("#nextBtn").show();
 		} else {
 			$("#prevBtn").show();
+			$("#nextBtn").show();
 		}
 
 		if (step == 3) {
