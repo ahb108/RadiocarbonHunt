@@ -273,10 +273,8 @@ task.
 			<div class="modal-footer">
 				<a id="prevBtn" href="#" onclick="showStep('prev')" class="btn btn-default">Previous</a>
 				<a id="nextBtn" href="#" onclick="showStep('next')" class="btn btn-success">Next</a>
-				<button id="startContrib" data-dismiss="modal" class="btn btn-primary" style="display:none"/>
-				</button>
-				<i class="glyphicon glyphicon-thumbs-up"></i> Let's start!</a>
-			</div>
+				<button id="closeBtn" data-dismiss="modal" onclick="showStep('finish')" class="btn btn-primary" style="display:none"><i class="glyphicon glyphicon-thumbs-up"></i> Back to task</a>
+            </div>
 		</div>
 	</div>
 </div>
@@ -303,20 +301,21 @@ task.
 		}
 		if (step == 0) {
 			$("#prevBtn").hide();
-			$("#startContrib").hide();
-			$("#nextBtn").show();
 		} else {
 			$("#prevBtn").show();
-			$("#nextBtn").show();
 		}
-
-		if (step == 3) {
+		if (step == 2) {
 			$("#nextBtn").hide();
-			$("#startContrib").show();
+			$("#closeBtn").show();
+		}
+		if (action == 'finish') {
+			step = 0;
+			$("#closeBtn").hide();
+			$("#prevBtn").hide();
+			$("#nextBtn").show();
 		}
 		$("#" + step).show();
 	}
-
 	showStep('next');
 	$("#modal").modal('show'); 
 </script>

@@ -106,19 +106,17 @@
 
 				<!-- End of stepped modal body -->
 
-				<!-- Modal footer -->
-				<div class="modal-footer">
-					<a id="prevBtn" href="#" onclick="showStep('prev')" class="btn btn-default">Previous</a>
-					<a id="nextBtn" href="#" onclick="showStep('next')" class="btn btn-success">Next</a>
-					<button id="startContrib" data-dismiss="modal" class="btn btn-primary" style="display:none"/>
-					<i class="glyphicon glyphicon-thumbs-up"></i> Let's start!</a>
-				</div>
+			<div class="modal-footer">
+				<a id="prevBtn" href="#" onclick="showStep('prev')" class="btn btn-default">Previous</a>
+				<a id="nextBtn" href="#" onclick="showStep('next')" class="btn btn-success">Next</a>
+				<a id="startContrib" href="../RadiocarbonHunt/newtask" class="btn btn-primary" style="display:none"><i class="glyphicon glyphicon-thumbs-up"></i> Let's start!</a>
+			</div>
 			</div>
 		</div>
 	</div>
 
 	<!-- Step through modals -->
-<script type="text/javascript">
+<script>
 	var step = -1;
 	function showStep(action) {
 		$("#" + step).hide();
@@ -130,14 +128,11 @@
 		}
 		if (step == 0) {
 			$("#prevBtn").hide();
-			$("#startContrib").hide();
-			$("#nextBtn").show();
 		} else {
 			$("#prevBtn").show();
-			$("#nextBtn").show();
 		}
 
-		if (step == 3) {
+		if (step == 2) {
 			$("#nextBtn").hide();
 			$("#startContrib").show();
 		}
