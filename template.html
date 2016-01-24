@@ -261,6 +261,10 @@ task.
 						If you find no dates whatsoever in the text, please take a second look through the text, but if you are sure then just submit a blank spreadsheet.
 						We have sought to exclude most reports that have no mention whatsoever of a radiocarbon date, but some will remain that do not have any.
 					</li>
+					<li>
+						You can add or remove rows from the spreadsheet by right-clicking in an empty cell fo the table.
+						(or on a Mac computer, holding the ctrl-button and clicking).
+					</li>
 				</ol>
 			</div>
 			<!-- End of stepped modal body -->
@@ -369,15 +373,15 @@ task.
 			var data = [[]];
 			var config = {
 				data : data,
-				minRows : 6,
-				minCols : 7,
+				minRows : 5,
+				minCols : 8,
 				minSpareRows : 1,
 				minSpareCols : 0,
 				maxRows : 20,
 				autoWrapRow : true,
 				autoWrapCol : true,
 				autoColumnSize : true,
-				colHeaders : ['LabCode', 'AgeBP', 'Error', 'dC13', 'Material', 'SiteContext', 'Comments'],
+				colHeaders : ['LabCode', 'AgeBP', 'Error', 'dC13', 'Material', 'SiteName', 'SiteContext', 'Comments'],
 				contextMenu : ['row_below', 'remove_row', 'undo', 'redo'],
 				stretchH : 'all'
 			};
