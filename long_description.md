@@ -3,7 +3,7 @@ fieldwork reports for mention of radiocarbon dates. Lists of such
 dates have become increasingly useful to researchers,
 above and beyond their immediate role in providing an absolute chronology
 for a particular archaeological site. Some people have used them to
-model the appearance or disappearance of certain categories of
+model the appearance or disappearance in human history of certain categories of
 historical monument more accurately, others to reconstruct past
 regional population highs and lows, others to consider patterns of
 climate change, and others to understand society's changing emphasis on different
@@ -16,7 +16,7 @@ has produced vast amounts of new evidence and a very large number of
 published reports about archaeological sites, including many that
 contain radiocarbon dates. However,  until recently, these reports were not published
 in easily accessibly places and were thus far too
-many and too scattered for their findings to make it regularly into
+numerous and too scattered for their findings to make it regularly into
 mainstream archaeological interpretations of the UK's human
 past. However, over the last decade, the Archaeology Data Service (in close
 cooperation with individual archaeological companies, county heritage
@@ -37,6 +37,7 @@ themselves also be made publicly available.
 ### This project is on behalf of:
 [![Archaeology Data Service logo](http://micropasts-other.s3.amazonaws.com/other/ADS_logo.png)](http://archaeologydataservice.ac.uk/)
 [![UCL Institute of Archaeology logo](http://micropasts-other.s3.amazonaws.com/other/UCL_logo.png)](http://ucl.ac.uk/archaeology)
+[![British Museum logo](http://micropasts-other.s3.amazonaws.com/other/bmBlackWhite.png)](http://britishmuseum.org/)
 
 ### Find the code on GitHub
 
