@@ -165,79 +165,85 @@ task.
 <!-- Modal start -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
-		<div class="modal-content">
 			<!-- Modal header -->
 			<div class="modal-header">
-				<h3>Transcribing the Worthington Smith notebooks</h3>
-
+				<h3>Gathering radiocarbon dates from fieldwork reports</h3>
 			</div>
 
 			<!-- Step 1 of the tutorial -->
-			<div id="0" class="modal-body" style="display:none">
+	<div id="0" class="modal-body" style="display:none">
 				<p>
-					This application is very simple and is a transcription based exercise. Our team would like you to
-					write down exactly what you see on each line of the notepad into the table displayed below the zooming image.
+					This project asks you to look through fieldwork reports written by commerical
+					archaeological units across the UK.  The tasks can be completed on a desktop computer,
+					laptop or tablet. You can use any web browser, although
+					we recommend Firefox for the best report-searching functions. For any given task, you will be presented with one multi-page fieldwork report. Scroll through it until you find mention of a radiocarbon date. We are
+					looking for the following information for each date (if available):
 				</p>
-
-				<p>
-					Each entry in the note book is similar, 7 fields:
-				</p>
-				<ul class="list-group">
+				<ol>
 					<li>
-						Entry number
+						LabCode: This is the code assigned by the radiocarbone laboratory.
+						For example, for the first date in the example image below your could write "SUERC-16897 (GU-16061)".
 					</li>
 					<li>
-						Date of discovery
+						AgeBP: This is probably the tricky bit. We are looking for the 'uncalibrated' date if possible, seomtimes call the ' C14 Age BP' (BP is before present) of the
+						'conventional age' or the 'uncalibrated age'. The date is often followed by a "±" symbol and then a measure of its accuracy or error (see below).
+						For the first date in the example image below, the AgeBP would be "915". Sometimes a 'calibrated' date or dates are mentioned (often expressed as a range BC/AD).
+						You can put these in the Comments column, but please look for an uncalibrated date (which should be present most of the time) to place in the AgeBP column
+						(or otherwise leave the column blank)./li>
+					<li>
+						Error: This is the instrument error associated with the uncalibrated radiocarbon measurment, usually express immediately after a ± symbol.
+						For example in the first date in the example below, you might write "35".
 					</li>
 					<li>
-						Description of the discovery
+						dC13: This is a common extra measurement used to correct the sampel for different fractions of different carbon isotopes. It is often referred to as "δ13C  and in ‰ units".
+						Please simply put the decimal number, not any unit symbols etc. So for example, for the first date in the image below, you would put "-22.2" in the dC13 column.
 					</li>
 					<li>
-						Length in inches
+						Material: Please enter the material the sample was taken on. For example this is often "bone" or "charcoal" or "grain".
+						Please also put any informaiton about the species, for example "wheat","human" or "oak". Always retain the original wording: if the species is "Hordeum" which refers to barley (as in the example below), please write "Hordeum".
+						If it is says "barley", write "barley". Try to separate material and species by a colon, so for example "grain: Hordeum".
 					</li>
 					<li>
-						Width in inches
+						SiteName: Please give the name of the site here, complete with county name as well if present
+						(hint: of the site name is in th title of the report)
 					</li>
 					<li>
-						Weight in pounds
+						SiteContext: This is for anything relating to the feature on a site from which the sample was taken
+						(e.g. "outer ring ditch", "pit 236" or, in the example below, "context 4/5")
 					</li>
 					<li>
-						Weight in ounces
+						Comments: You make your own remarks here if you like and/or add further information about
+						a particular date you think is useful. For example, sometimes the type of bone (e.g. radius,
+						ulna) will be mentioned, or a field sample number.
 					</li>
-				</ul>
+				</ol>
+				<img src="http://micropasts-other.s3.amazonaws.com/other/exampledates.png" class="img-polaroid" alt="An example of two radiocarbon mentioned in a fieldwork report." width="50%"/>
 			</div>
 
 			<!-- Step 2 of the tutorial -->
 			<div id="1" class="modal-body" style="display:none">
 				<p>
-					The image that we would like you to transcribe for us, starts at the top of the page and can be scrolled
-					up and down, and zoomed in and out to read more of the contents. We hope that this interface allows you to
-					work on the image concurrently with the text table below the image container.
+					Just a few more tips before you start:
 				</p>
-
-				<p>
-					The table starts off with just 6 rows but will add another automatically when you get to the bottom, up
-					to a maximum of 20 rows.
-				</p>
-
-				<p>
-					The image is contained within an interface that allows you to zoom in and out, and even go full screen.
-					Try the controls out, you won't break anything!
-				</p>
-			</div>
-
-			<!-- Step 2 of the tutorial -->
-			<div id="2" class="modal-body" style="display:none">
-				<p>
-					As in the Bronze Age index transcription applications, some abbreviations are used. If you see the sign in the image below, it means 'ditto'.
-					So please enter the same as the previous line's entry.
-				</p>
-				<img src="http://micropasts.org/wp-content/uploads/2015/03/MicroPasts-·-Project-Transcribing-the-Worthington-George-Smith-catalogue-·-Contribute.png">
-				<p>
-					As this is an antiquarian notebook, the measurements are not metric and are in imperial measures. When transcribing, do not
-					attempt to convert the weights or dimensions. Instead please just enter as seen. If you see 3 1/4, then please enter as such.
-					The project team will do the conversions.
-				</p>
+				<ol>
+					<li>
+						Sometimes dates are not as nicely tabulated as in the previous example image. 
+						Sometimes instead they are just mentioned in the main text. In such cases, 
+						just do your best to add whatever information about the date that you can find in the text.
+					</li>
+					<li>
+						With the Firefox browser and some others, you can use the search function to fin those places in the text which have radiocarbon dates. 
+						This often quicker than reading through the whole text which can sometimes be quite long. 
+						For example you could search the text for the word "radiocarbon" or for the "±" symbol./li>
+					<li>
+						If for one of the columns in your spreadsheet you cannot find information (e.g. if no mention is made of dC13 values), 
+						then just leave that column blank in what you submit.
+					</li>
+					<li>
+						If you find no dates whatsoever in the text, please take a second look through the text, but if you are sure then just submit a blank spreadsheet. 
+						We have sought to exclude most reports that have no mention whatsoever of a radiocarbon date, but some will remain that do not have any.
+					</li>
+				</ol>
 			</div>
 			<!-- End of stepped modal body -->
 
@@ -279,7 +285,7 @@ task.
 			$("#prevBtn").show();
 		}
 
-		if (step == 2) {
+		if (step == 1) {
 			$("#nextBtn").hide();
 			$("#startContrib").show();
 		}
